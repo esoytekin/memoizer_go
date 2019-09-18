@@ -1,0 +1,10 @@
+github.com/fanliao/go-concurrentMap v0.0.0-20141114143905-7d2d7a5ea67b h1:aHrWACMJZJ160Pl0qlH6s0/+5Kb1KYG/kEUTaZCW7QY=
+github.com/fanliao/go-concurrentMap v0.0.0-20141114143905-7d2d7a5ea67b/go.mod h1:DRc7ieGsJItxOsZ2lnqemj92zsSsBjBepuritZaumSE=
+github.com/fanliao/go-promise v0.0.0-20141029170127-1890db352a72 h1:0eU/faU2oDIB2BkQVM02hgRLJjGzzUuRf19HUhp0394=
+github.com/fanliao/go-promise v0.0.0-20141029170127-1890db352a72/go.mod h1:PjfxuH4FZdUyfMdtBio2lsRr1AKEaVPwelzuHuh8Lqc=
+github.com/google/go-cmp v0.3.1 h1:Xye71clBPdm5HgqGwUkwhbynsUJZhDbS20FvLhQ2izg=
+github.com/google/go-cmp v0.3.1/go.mod h1:8QqcDgzrUqlUb/G2PQTWiueGozuR1884gddMywk6iLU=
+github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
+github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
+gotest.tools v2.2.0+incompatible h1:VsBPFP1AI068pPrMxtb/S8Zkgf9xEmTLJjfM+P5UIEo=
+gotest.tools v2.2.0+incompatible/go.mod h1:DsYFclhRJ6vuDpmuTbkuFWG+y2sxOXAzmJt81HFBacw=

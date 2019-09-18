@@ -9,14 +9,14 @@ import (
 )
 
 type Memoizer struct {
-	E ExpensiveFunction
+	e Computable
 }
 
 var cache sync.Map
 var mutex sync.Mutex
 var count uint64
 
-func (self Memoizer) compute(v string) int {
+func (self Memoizer) Compute(v string) int {
 
 	result, ok := cache.Load(v)
 	if !ok {
@@ -27,7 +27,7 @@ func (self Memoizer) compute(v string) int {
 		if !ok {
 			ft := promise.Start(func() (interface{}, error) {
 				atomic.AddUint64(&count, 1)
-				return self.E.compute(v), nil
+				return self.e.Compute(v), nil
 			})
 			cache.Store(v, ft)
 			result = ft
@@ -47,6 +47,11 @@ func (self Memoizer) compute(v string) int {
 	return r.(int)
 
 }
+
+func New(c Computable) Computable {
+	return Memoizer{c}
+}
+
 func (self Memoizer) GetCount() uint64 {
 	return count
 }

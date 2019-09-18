@@ -18,7 +18,7 @@ func startTest(t *testing.T, c Computable) {
 		wg.Add(1)
 		go func(td string, ex int) {
 			defer wg.Done()
-			res := c.compute(td)
+			res := c.Compute(td)
 			assert.Assert(t, res == ex, "Expected %d, got %d", ex, res)
 		}(td, ex)
 	}
@@ -33,10 +33,10 @@ func TestExpensiveFunc(t *testing.T) {
 }
 
 func TestMemoizer1(t *testing.T) {
-	e := ExpensiveFunction{}
-	m := Memoizer{E: e}
+	var e = ExpensiveFunction{}
+	var m Computable = New(e)
 
 	startTest(t, m)
-	assert.Assert(t, m.GetCount() == 3, "expected %d, got %d", 3, m.GetCount())
+	assert.Assert(t, m.(Memoizer).GetCount() == 3, "expected %d, got %d", 3, m.(Memoizer).GetCount())
 
 }

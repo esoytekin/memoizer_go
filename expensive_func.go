@@ -7,7 +7,7 @@ import (
 
 type ExpensiveFunction struct{}
 
-func (self ExpensiveFunction) compute(v string) int {
+func (self ExpensiveFunction) Compute(v string) int {
 	ticker := time.NewTicker(3 * time.Second)
 	<-ticker.C
 	ticker.Stop()
