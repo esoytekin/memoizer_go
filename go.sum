@@ -1,5 +1,3 @@
-github.com/fanliao/go-concurrentMap v0.0.0-20141114143905-7d2d7a5ea67b h1:aHrWACMJZJ160Pl0qlH6s0/+5Kb1KYG/kEUTaZCW7QY=
-github.com/fanliao/go-concurrentMap v0.0.0-20141114143905-7d2d7a5ea67b/go.mod h1:DRc7ieGsJItxOsZ2lnqemj92zsSsBjBepuritZaumSE=
 github.com/fanliao/go-promise v0.0.0-20141029170127-1890db352a72 h1:0eU/faU2oDIB2BkQVM02hgRLJjGzzUuRf19HUhp0394=
 github.com/fanliao/go-promise v0.0.0-20141029170127-1890db352a72/go.mod h1:PjfxuH4FZdUyfMdtBio2lsRr1AKEaVPwelzuHuh8Lqc=
 github.com/google/go-cmp v0.3.1 h1:Xye71clBPdm5HgqGwUkwhbynsUJZhDbS20FvLhQ2izg=
