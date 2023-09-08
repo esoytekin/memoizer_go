@@ -5,7 +5,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	promise "github.com/fanliao/go-promise"
+	future "github.com/esoytekin/go-future"
 )
 
 type Memoizer struct {
@@ -25,7 +25,7 @@ func (self Memoizer) Compute(v string) int {
 		result, ok = cache.Load(v)
 
 		if !ok {
-			ft := promise.Start(func() (interface{}, error) {
+			ft := future.Start(func() (int, error) {
 				atomic.AddUint64(&count, 1)
 				return self.e.Compute(v), nil
 			})
@@ -37,14 +37,14 @@ func (self Memoizer) Compute(v string) int {
 
 	}
 
-	r, err := result.(*promise.Future).Get()
+	r, err := result.(*future.FutureTask[int]).Get()
 
 	if err != nil {
 		log.Println(err)
 		return 0
 	}
 
-	return r.(int)
+	return r
 
 }
 
